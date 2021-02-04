@@ -54,8 +54,9 @@ def get_pet_labels(image_dir):
     for filename in filenames:
         if filename not in results_dic and not filename.startswith('.'):
             filename_split = filename.lower().split('_')
-            # remove the digits
+            # remove the digits and trailling white space
             pet_name = ' '.join([word for word in filename_split if word.isalpha()])
+            pet_name = pet_name.strip()
             # add new entry to the result_dic with the extracted filename
             results_dic[filename] = [pet_name]
         else:
