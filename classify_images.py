@@ -82,7 +82,7 @@ def classify_images(images_dir, results_dic, model):
         # If the pet image label within model_label match the terms in the list
         # then added to results_dic as an exact match(1) using extend()
         if truth in model_label:
-            results_dic[key].extend([truth, 1])
+            results_dic[key].extend([model_label, 1])
         # if not, added to results dictionary as NOT a match(0) using extend()
         else:
-            results_dic[key].extend([truth, 0])
+            results_dic[key].extend([model_label, 0])
