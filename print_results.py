@@ -89,7 +89,7 @@ def print_results(results_dic, results_stats_dic, model,
                 print("{:20}: {:3d}".format(results_stats_dic[key][0], results_stats_dic[key][1]))
             # Pet Image Label is NOT-a-Dog - Classified as a-DOG
             elif (results_dic[key][3] != 1) and (results_dic[key][4] == 1):
-                print("{:20}: {:3d}".format(results_stats_dic[key][0], results_stats_dic[key][1]))
+                print("{:20}: {:3d}".format(results_dic[key][0], results_dic[key][1]))
     
     # IF print_incorrect_breed == True AND there were dogs whose breeds 
     # were incorrectly classified - print out these cases                    
